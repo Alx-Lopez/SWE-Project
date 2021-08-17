@@ -1,0 +1,11 @@
+certifi==2020.12.5
+cffi==1.14.5
+chardet==4.0.0
+coverage==5.5
+cryptography==3.4.7
+idna==2.10
+pycparser==2.20
+PyMySQL==1.0.2
+python-decouple==3.4
+requests==2.25.1
+urllib3==1.26.4

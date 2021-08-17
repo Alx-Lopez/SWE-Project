@@ -1,0 +1,36 @@
+# pipeline for common-services-be
+
+pipelines:
+  branches:
+    development:
+      - step:
+          name: Test
+          image: python:3.8
+          caches:
+            - pip
+          script:
+            - if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+            - cd tests
+            - coverage run -m unittest discover -p "*.py" -v
+            - coverage report
+    test-deployment:
+    - step:
+       name: DeployDemand
+       image: atlassian/default-image:2
+       deployment: TestDemand
+       script:
+         - pipe: atlassian/ssh-run:0.2.2
+           variables:
+             SSH_USER: $USER
+             SERVER: $DEMAND_SERVER
+             COMMAND: './deploy-cs-be.sh'
+    - step:
+        name: DeploySupply
+        image: atlassian/default-image:2
+        deployment: TestSupply
+        script:
+          - pipe: atlassian/ssh-run:0.2.2
+            variables:
+              SSH_USER: $USER
+              SERVER: $SUPPLY_SERVER
+              COMMAND: './deploy-cs-be.sh'

@@ -1,0 +1,104 @@
+/* 
+    Landing Page Specific CSS Styling
+
+    ========================
+        Table of Contents
+    ========================
+
+    1) Img Container
+
+    2) Content Alignment
+
+    3) Slogan
+
+    4) Button
+
+*/
+
+/* 
+    ========================
+    ========================
+        1) Img Container
+    ========================
+    ========================
+*/
+
+:root {
+    --purpleRGBA: rgba(54, 13, 79, 0.5);
+    --pinkRGBA: rgb(248, 116, 136, 0.5);
+    --orangeRGBA: rgb(255, 153, 112, 0.5);
+}
+
+.img-container {
+    background-image: linear-gradient(to bottom,
+    var(--purpleRGBA),
+    var(--pinkRGBA),
+    var(--orangeRGBA)),
+    url('/images/landing_page_background.jpg');
+    background-size: cover;
+    position: absolute;
+    min-width: 1000%;
+    min-height: 1000%;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%) scale(0.1);
+    z-index: -1;
+
+    filter: brightness(30%);
+}
+
+/* 
+    ========================
+    ========================
+        2) Content Alignment
+    ========================
+    ========================
+*/
+
+#landing-page-content {
+    max-width: 50vh;
+    
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* 
+    ========================
+    ========================
+        3) Slogan
+    ========================
+    ========================
+*/
+
+.slogan {
+    text-align: center;
+    z-index: 10;
+}
+
+.slogan h1 {
+    font-size: 2.75rem;
+    margin-bottom: 10px;
+    color: var(--white);
+}
+
+.slogan p {
+    font-size: 1.1rem;
+    font-style: italic;
+    color: var(--white);
+}
+
+/* 
+    ========================
+    ========================
+        4) Button
+    ========================
+    ========================
+*/
+
+button {
+    height: 2.5rem;
+    margin: 1rem 0;
+}

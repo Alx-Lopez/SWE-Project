@@ -1,0 +1,26 @@
+/* 
+    All variables used are from the common-services stylesheet
+    Stylings for *, body, headers, forms, and buttons are also from the common-services stylesheet
+    This document has the styling for the order confirmation page
+*/
+
+.orderDetails {
+    margin: auto;
+    padding: 1rem;
+    max-width: 65vh;
+    text-align: center;
+}
+
+.orderDetails h2 {
+    color: var(--darkPurple);
+    margin-bottom: 1rem;
+}
+
+.orderDetails p {
+    text-align: left;
+    color: var(--purple);
+}
+
+#vehicleInfo {
+    padding: 1rem 0;
+}

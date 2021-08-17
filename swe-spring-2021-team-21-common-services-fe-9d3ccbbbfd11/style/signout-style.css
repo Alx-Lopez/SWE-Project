@@ -1,0 +1,19 @@
+/* 
+    Sign Out Page Specific CSS Styling
+*/
+
+.signoutDetails {
+    margin: auto;
+    padding: 1rem;
+    max-width: 65vh;
+    text-align: center;
+}
+
+.signoutDetails h2 {
+    color: var(--darkPurple);
+    margin-bottom: 1rem;
+}
+
+.signoutDetails p {
+    color: var(--purple);
+}

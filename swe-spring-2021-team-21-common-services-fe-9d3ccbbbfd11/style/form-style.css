@@ -1,0 +1,39 @@
+/* 
+    Form Specific CSS Styling
+*/
+
+form {
+    margin: auto;
+    padding: 1rem;
+    max-width: 65vh;
+    box-sizing: border-box;
+}
+
+.formElement {
+    padding: 0.5rem 0;
+}
+
+.formElement label {
+    display: inline-block;
+    margin-bottom: 0.25rem;
+    color: var(--purple);
+}
+
+.formElement input {
+    width: 100%;
+    padding: 0.5rem;
+}
+
+#errorMessage {
+    color: var(--red);
+    visibility: hidden;
+}
+
+.redirectDiv {
+    text-align: center;
+}
+
+.redirect {
+    text-decoration: underline;
+    cursor: pointer;
+}

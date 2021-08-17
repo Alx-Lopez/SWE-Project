@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Confirmed - WeGo</title>
+
+    <!-- CSS and other styling imports -->
+    <link rel="icon" href="/images/favicon.png">
+    <link rel="stylesheet" href="/style/global-style.css">
+    <link rel="stylesheet" href="/style/form-style.css">
+    <link rel="stylesheet" href="/demand-fe/style/order-style.css">
+    <style>@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');</style>
+    
+    <!-- External Library Imports -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+    <!-- JS component and functionality imports -->
+    <script src="/scripts/session-management/check-session-does-not-exist.js"></script>
+    <script src="/modular-components/wego-header.js" defer></script>
+    <script src="/demand-fe/scripts/order-confirmation.js" defer></script>
+    <script src="/scripts/session-management/close-session.js" defer></script>
+</head>
+<body>
+    <div class="orderDetails">
+        <h2>Order Confirmed</h2>
+        <p>Thank you for requesting a WeGo service!</p>
+        <!-- TODO: Show order number -->
+        <p id="orderNumber"></p>
+        <p>Information of the vehicle fulfilling your request is listed below:</p>
+        <div id="vehicleInfo"></div>
+        <p>We hope you are satisfied with our service and return to it in the future!</p>
+        <a href="/demand-fe/dashboard.html" class="redirect">Click here to return to your dashboard</a>
+    </div>
+</body>
+</html>

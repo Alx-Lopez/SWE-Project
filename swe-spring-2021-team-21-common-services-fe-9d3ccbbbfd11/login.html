@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Log In to WeGo</title>
+        
+        <!-- CSS and other styling imports -->
+        <link rel="icon" href="/images/favicon.png">
+        <link rel="stylesheet" href="/style/global-style.css">
+        <link rel="stylesheet" href="/style/form-style.css">
+        <style>@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');</style>
+
+        <!-- External Library Imports -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/js-sha256/0.9.0/sha256.min.js" integrity="sha512-szJ5FSo9hEmXXe7b5AUVtn/WnL8a5VofnFeYC2i2z03uS2LhAch7ewNLbl5flsEmTTimMN0enBZg/3sQ+YOSzQ==" crossorigin="anonymous"></script>
+                
+        <!-- JS component and functionality imports -->
+        <script src="/scripts/session-management/check-session-exists.js"></script>
+        <script src="/modular-components/wego-header.js" defer></script>
+        <script src="/scripts/login.js" defer></script>
+        <script src="/scripts/form-error-message.js" defer></script>
+    </head>
+    <body>
+        <form id="loginForm">
+            <h2>Log In</h2>
+            <div class="formElement">
+                <label for="email">Email</label>
+                <input type="text" id="email">
+            </div>
+            <div class="formElement">
+                <label for="password">Password</label>
+                <input type="password" id="password">
+            </div>
+            <div class="formElement">
+                <p id="errorMessage"></p>
+            </div>
+            <div class="formElement">
+                <input type="button" id="submitLogin" value="Log In">
+            </div>
+            <div class="redirectDiv">
+                <a href="register.html" class="redirect">Don't have an account? Click here to register!</a>
+            </div>
+        </form>
+    </body>
+</html>

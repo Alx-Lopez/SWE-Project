@@ -1,0 +1,25 @@
+# deployment pipline for demand front end code
+
+image: atlassian/default-image:2
+
+pipelines:
+  branches:
+    test-deployment:
+    - step:
+       name: DeployDemand
+       deployment: TestDemand
+       script:
+         - pipe: atlassian/ssh-run:0.2.2
+           variables:
+             SSH_USER: $USER
+             SERVER: $DEMAND_SERVER
+             COMMAND: './deploy-cs-fe.sh'
+    - step:
+       name: DeploySupply
+       deployment: TestSupply
+       script:
+         - pipe: atlassian/ssh-run:0.2.2
+           variables:
+             SSH_USER: $USER
+             SERVER: $SUPPLY_SERVER
+             COMMAND: './deploy-cs-fe.sh'

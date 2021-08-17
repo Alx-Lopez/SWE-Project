@@ -1,0 +1,169 @@
+/* 
+
+    This css file containes all the universal styling
+    for the WeGo site that applies to all pages
+
+    ========================
+        Table of Contents
+    ========================
+
+    1) Variables (Colors) 
+
+    2) Global Styles
+
+    3) Typography
+
+    4) Universal 
+       Components
+        4.1) Header
+        4.2) Buttons
+
+*/
+
+/* 
+    ========================
+    ========================
+        1) Variables
+    ========================
+    ========================
+*/
+
+:root {
+    --darkPurple: #250538;
+    --purple: #360D4F;
+    --magenta: #66265D;
+    --pink: #F87488;
+    --orange: #FF9970;
+    --white: #FFFFFF;
+    --red: #F32242;
+    --shadow: #ECECEC;
+}
+
+/* 
+    ========================
+    ========================
+        2) Global Styles
+    ========================
+    ========================
+*/
+
+* {
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    color: var(--magenta);
+}
+
+body {
+    background-color: var(--white);
+}
+
+hr {
+    height: 3px;
+    border-width: 0px;
+    background-color: var(--magenta);
+    margin-bottom: 1rem;
+}
+
+/* 
+    ========================
+    ========================
+        3) Typography
+    ========================
+    ========================
+*/
+
+h1, h2, h3, h4, h5 {
+    text-align: center;
+}
+
+/* 
+    ========================
+    ========================
+        4) Universal
+           Components
+    ========================
+    ========================
+*/
+
+/* 
+    ========================
+        4.1) Header
+    ========================
+*/
+
+header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    min-height: 7vh;
+    background-image: linear-gradient(to right,
+    var(--purple),
+    var(--pink),
+    var(--orange));
+    padding: 0 5%;
+}
+
+.logo {
+    color: var(--white);
+    font-size: 1.2rem;
+    cursor: pointer;
+    margin-right: auto;
+}
+
+.logo a {
+    color: var(--white);
+    text-decoration: none;
+}
+
+.headerLinks {
+    display: flex;
+    justify-content: space-around;
+    width: 35%;
+}
+
+.headerLinks li {
+    list-style-type: none;
+}
+
+.headerLinks a {
+    color: var(--darkPurple);
+    text-decoration: underline;
+}
+
+.headerLinks a:hover,
+.headerLinks a:focus {
+    color: var(--white);
+    transition: 0.3s;
+    outline: none;
+    cursor: pointer;
+}
+
+/* 
+    ========================
+        4.2) Buttons
+    ========================
+*/
+
+button,
+input[type=button]{
+    border-radius: 1.2rem;
+    border: none;
+    background-color: var(--magenta);
+    border: solid 2px var(--magenta);
+    color: var(--white);
+    text-transform: uppercase;
+    width: 100%;
+}
+
+button:hover,
+button:focus,
+input[type=button]:hover,
+input[type=button]:focus {
+    cursor: pointer;
+    border: solid 2px var(--pink);
+    background-color: var(--white);
+    color: var(--magenta);
+    transition: 0.3s;
+    outline: none;
+}

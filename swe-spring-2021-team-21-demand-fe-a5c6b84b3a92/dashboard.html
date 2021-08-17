@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My WeGo Dashboard</title>
+
+    <!-- CSS and other styling imports -->
+    <link rel="icon" href="/images/favicon.png">
+    <link rel="stylesheet" href="/style/global-style.css">
+    <link rel="stylesheet" href="/demand-fe/style/dashboard-style.css">
+    <style>@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');</style>
+    
+    <!-- External Library Imports -->
+    <script src="https://kit.fontawesome.com/6746c1dae7.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
+    <!-- JS component and functionality imports -->
+    <script src="/scripts/session-management/check-session-does-not-exist.js"></script>
+    <script src="/modular-components/wego-header.js" defer></script>
+    <script src="/demand-fe/scripts/request-order-redirect.js"></script>
+    <script src="/demand-fe/scripts/hover-change.js" defer></script>
+    <script src="/scripts/session-management/close-session.js" defer></script>
+    <script src="/demand-fe/scripts/dynamic-name.js" defer></script>
+</head>
+<body>
+    <div class="welcomeContainer">
+        <h1 id="welcomeMessage">Welcome!</h1>
+    </div>
+    <div class="servicesContainer">
+        <h2>Request a Service</h2>
+        <hr>
+        <div id="plugins">
+            <!-- TODO: Dynamically list services -->
+            <div class="pluginCard" id="rideShare">
+                <i class="fas fa-car-side"></i>
+                <h3>Disability Ride Share</h3>
+            </div>
+            <div class="pluginCard" id="medicine">
+                <i class="fas fa-file-prescription"></i>
+                <h3>Medicine Delivery</h3>
+            </div>
+            <div class="pluginCard" id="water">
+                <i class="fas fa-tint"></i>
+                <h3>Water Delivery</h3>
+            </div>
+            <div class="pluginCard" id="electronics">
+                <i class="fas fa-robot"></i>
+                <h3>Electronic Parts Delivery</h3>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

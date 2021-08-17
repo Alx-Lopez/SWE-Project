@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+
+    <!-- CSS and other styling imports -->
+    <link rel="icon" href="/images/favicon.png">
+    <style>@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');</style>
+    <link rel="stylesheet" href="/style/global-style.css">
+    <link rel="stylesheet" href="/style/form-style.css">
+    
+    <!-- External Library Imports -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- JS component and functionality imports -->
+    <script src="/scripts/session-management/check-session-does-not-exist.js"></script>
+    <script src="/modular-components/wego-header.js" defer></script>
+    <script src="/demand-fe/scripts/submit-request.js"></script>
+    <script src="/demand-fe/scripts/dynamic-request-service-elements.js" defer></script>
+    <script src="/scripts/form-error-message.js" defer></script>
+    <script src="/scripts/session-management/close-session.js" defer></script>
+</head>
+<body>
+    <!-- TODO: Dynamically create page based off of selected plugin on Customer Dashboard 
+        Update title and formTitle -->
+    <form id="requestServiceForm">
+        <h2 id="formTitle"></h2>
+        <div class="formElement">
+            <!-- TODO: MapBox API Address Bar instead of generic input -->
+            <label for="street_address">Street Address</label>
+            <input class="address" type="text" id="street_address">
+        </div>
+        <div class="formElement">
+            <label for="city">City</label>
+            <input class="address" type="text" id="city">
+        </div>
+        <div class="formElement">
+            <label for="state">State</label>
+            <input class="address" type="text" id="state">
+        </div>
+        <div class="formElement">
+            <label for="zip_code">Zip Code</label>
+            <input class="address" type="text" id="zip_code">
+        </div>
+        <div class="formElement">
+            <label for="cc_name">CardHolder Name</label>
+            <input type="text" id="cc_name">
+        </div>
+        <div class="formElement">
+            <label for="cc_number">Card Number</label>
+            <input type="text" id="cc_number">
+        </div>
+        <div class="formElement">
+            <label for="exp_date">Expiration Date</label>
+            <input type="text" id="exp_date">
+        </div>
+        <div class="formElement">
+            <label for="cvv">CVV</label>
+            <input type="text" id="cvv">
+        </div>
+        <div class="formElement">
+            <p id="errorMessage"></p>
+        </div>
+        <div class="formElement">
+            <input type="button" id="submitRequest" value="Submit Request">
+        </div>
+    </form>
+</body>
+</html>
